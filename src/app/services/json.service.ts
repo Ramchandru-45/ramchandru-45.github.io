@@ -1,0 +1,16 @@
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class JsonService {
+
+  constructor(private http:HttpClient) { }
+
+  getBio(): Observable<any> {
+    console.log("getBio");
+    return this.http.get('assets/jsons/bio.json');
+  }
+}

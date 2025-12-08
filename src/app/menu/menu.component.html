@@ -1,0 +1,17 @@
+@if( width > 700){
+    <div [ngClass]="'menubar'">
+   
+        <div [ngClass]="'logo'">RAMCHANDRU</div>
+        <div [ngClass]="'navicons'">
+            <a (click)="goto(item.id)" [ngClass]="currentPage(item.name) ? 'navigator-current' : 'navigator'" *ngFor="let item of NavigationItems">
+                {{item.name}}
+            </a>
+        </div>
+    
+    </div>
+}
+@else{
+    <div>
+        Menubar
+    </div>
+}

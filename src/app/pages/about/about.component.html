@@ -1,0 +1,16 @@
+<div style="color:white">
+    
+    @if(data)
+    {
+        <div [ngClass]="'about_page'">
+            <h3>{{data.firstname}}</h3>
+            <p>{{data.lastname}}</p>
+            <p>{{data.profile}}</p>
+            
+        </div>
+    }
+    @else
+    {
+        <h3>Sorry about that..<br>But it looks like a problem in Loading the Contents.<br><span style="color:lawngreen">Please try later.</span></h3>
+    }
+</div>

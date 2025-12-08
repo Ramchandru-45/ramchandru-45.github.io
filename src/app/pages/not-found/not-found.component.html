@@ -1,0 +1,20 @@
+<div class="not-found-container">
+    <div class="error-content">
+        <div class="error-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+            </svg>
+        </div>
+        
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Page Not Found</h2>
+        <p class="error-message">Sorry, the page you're looking for doesn't exist.</p>
+        
+        <div class="error-actions">
+            <a routerLink="/home" routerLinkActive="active" class="btn btn-primary">Go Home</a>
+            <button class="btn btn-secondary" onclick="history.back()">Go Back</button>
+        </div>
+    </div>
+</div>

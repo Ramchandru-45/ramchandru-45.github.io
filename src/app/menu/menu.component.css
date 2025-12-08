@@ -1,0 +1,51 @@
+.menubar {
+    background: linear-gradient(120deg, rgb(0, 0, 0) 5%, rgb(40, 11, 75) 100%);
+    border-bottom: solid white;
+    border-bottom-width: 1px;
+    display: flex;
+    gap: 800px;
+}
+
+.logo {
+    align-content: center;
+    padding: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    user-select: none;
+}
+
+.navicons{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    user-select: none;
+}
+
+.navigator {
+    text-decoration: none;
+    color: gold;
+    font-size: 16px;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    padding: 10px;  
+    cursor: default;
+    transition: ease-in-out 0.3s;
+}
+
+.navigator-current {
+    text-decoration: none;
+    color: gray;
+    font-size: 18px;
+    font-family: 'Segoe UI';
+    font-weight: 600;
+    padding: 10px;  
+    cursor: default;
+}
+
+.navigator:hover {
+        font-size: 14px;
+        color: lightblue;
+}
+
