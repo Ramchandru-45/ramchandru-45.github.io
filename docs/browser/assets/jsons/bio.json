@@ -1,0 +1,24 @@
+{
+    "firstname": "Ramchandru",
+    "lastname": "Rajendran",
+    "dob": "2004-05-04",
+    "gender": "Male",
+    "education":{
+        "Bachelor":{
+            "degree": "B.Tech in Information Technology",
+            "institution": "Panimalar Engineering College",
+            "yop": "2025"
+        },
+        "HigherSecondary":{
+            "institution": "Bhaktavatsalam Vidyashram",
+            "yop": "2021"
+        },
+        "Secondary":{
+            "institution": "Ordnance Clothing factory School",
+            "yop": "2019"
+        }
+    },
+    "profile": "Hey People, I'm Ramchandru a passionate Application & Graphics Developer from India. Be sure to check out more..." ,
+    "about": ""
+    
+}
