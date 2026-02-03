@@ -1,23 +1,57 @@
 import { Component } from '@angular/core';
+import { AsyncPipe, NgClass, NgStyle } from '@angular/common';
+import { Subscription } from 'rxjs';
 import { JsonService } from '../../services/json.service';
+import { GitService } from '../../services/git.service';
 import { MyData } from '../../types/my-data';
+import {MatIconModule} from '@angular/material/icon';
+import { SocialAccComponent } from '../../components/social.acc/social.acc.component';
+import { ResizeService } from '../../services/resize.service';
+import { ProjectsComponent } from '../projects/projects.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [NgClass,MatIconModule, SocialAccComponent, AsyncPipe, ProjectsComponent, NgStyle],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
 
+  fcolor:string = "white";
   data: MyData | undefined;
-  constructor(private json:JsonService){}
+  private biosubscription!:Subscription;
+  githubAvatarUrl: string = 'assets/svg/profile.svg';
+  private gitSubscription!: Subscription;
+  
+  age:  number = new Date().getFullYear() - 2004;
+
+
+  constructor(private json:JsonService, private git:GitService, public resize:ResizeService){}
+
   ngOnInit() {
-    console.log(this.data);
-    this.json.getBio().subscribe((res)=>{
-      this.data = res;
-    })
+    //console.log('subscribed')
+    if(!this.biosubscription){
+      this.biosubscription=this.json.getBio().subscribe((res)=>{
+        this.data = res;
+      })
+    }
     
+    if(!this.gitSubscription)
+    {
+      this.gitSubscription= this.git.getUserProfile("Ramchandru-45").subscribe(data => {
+          this.githubAvatarUrl = data.avatar_url;
+        });
+    }
+
+}
+
+  ngOnDestroy(){
+    //console.log('unsubscribed');
+    if(this.biosubscription)
+      this.biosubscription.unsubscribe();
+
+    if(this.gitSubscription)
+      this.gitSubscription.unsubscribe();
   }
 }

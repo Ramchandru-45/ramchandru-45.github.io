@@ -1,9 +1,7 @@
 export interface MyData {
-    firstname: string;
-    lastname: string;
     dob: string;
-    gender: string;
-    education: {
+    g: string;
+    q: {
         Bachelor: {
             degree: string;
             institution: string;
@@ -20,6 +18,5 @@ export interface MyData {
             yop: string;
         };
     };
-    profile: string;
-    about: string;
+    location: string;
 }

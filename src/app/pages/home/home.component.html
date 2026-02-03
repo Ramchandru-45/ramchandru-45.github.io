@@ -1,9 +1,30 @@
-<div style="color:white">
+<div ngClass="home-container">
+    <div ngClass="profile-container">
+        
+        <img [ngClass]="(resize.windowSize$ | async)! > 720 ? 'image-icon1' : 'image-icon2'" [src]="githubAvatarUrl" alt="profile"/>
+        <div ngClass="intro-container1">
+            <h2>Hi, I'm Ramchandru</h2>
+            <p><span style="color:cornflowerblue"> Software Developer </span> & <span style="color:tomato"> Graphics Engineer </span></p>
+            <div>Follow On</div>
+            <div ngClass="intro-container2">
+                <app-social ></app-social>
+            </div>
+            <p>Be sure to check out more..</p>
+        </div>
+    </div>
     @if(data)
     {
-        <h3>Profile</h3>
-        <div>
-            <p>{{data.profile}}</p>
+        <div ngClass="info-container">
+            <div style="color: white; font-size: large;padding-bottom : 10px;">Hello Dear Friend, </div>
+            <div style="gap : 3px;padding-left: 5%; font-size:medium">
+                Welcome to my Portfolio, I'm a {{age}} year old, a Software Developer and Graphics Engineer.<br>
+                My Primary coding language is C++ and Java. I use Angular as my frontend framework.<br>
+                Besides coding, I love creating Graphical content using Shader programming and Third-party tools like Blender.<br>
+                Feel free to connect with me on the social links provided above.<br>
+                Also, visit my projects page to see what I've been working on recently.
+                
+            </div>
+            
         </div>
     }
 </div>

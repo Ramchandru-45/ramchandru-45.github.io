@@ -1,3 +1,12 @@
-<div style="color:white">
-    <p>contact works!</p>
+
+<div class="contact-container">
+    <h4>If you'd like to get in touch, feel free to reach out through the following platforms:</h4>
+    <app-social></app-social>
+    <br>
+    <h3>Write your Email to <a [cdkCopyToClipboard]="mailID" (cdkCopyToClipboardCopied)="onCopy($event)"><span style="color: blue; cursor: pointer;">{{mailID}}</span></a></h3>
+    @if(copySuccess)
+    {
+        <p>Email Copied to ClipBoard</p>
+    }
+
 </div>

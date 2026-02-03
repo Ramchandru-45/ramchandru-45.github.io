@@ -1,0 +1,21 @@
+.social-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap : 20px;
+}
+
+.linkedin{
+    position: relative;
+    width: 50px;
+    cursor: pointer;
+}
+
+.github{
+    height: 100%;
+    width: 40px;
+    background-color: white;
+    border-radius: 50px;
+    cursor: pointer;
+}

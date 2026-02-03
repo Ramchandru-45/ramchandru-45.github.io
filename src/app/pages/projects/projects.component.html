@@ -1,0 +1,17 @@
+<div class="projects-container">
+  @if(projects)
+  {
+    <ul class="project-item" *ngFor="let project of projects">
+      <a style="text-decoration: none; color: lightgray;" [href]="project.html_url" target="_blank">
+        <p style="font-size:large; color: white">{{ project.name }}</p>
+        <p>{{ project.description }}</p>
+        <p>Language: {{ project.language }}</p>
+        </a>
+    </ul>
+  }
+  @else
+  {
+    <p>{{Message}}</p>
+  }
+    
+</div>

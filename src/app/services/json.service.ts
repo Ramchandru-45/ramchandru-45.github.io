@@ -10,7 +10,10 @@ export class JsonService {
   constructor(private http:HttpClient) { }
 
   getBio(): Observable<any> {
-    console.log("getBio");
     return this.http.get('assets/jsons/bio.json');
+  }
+
+  getBg(): Observable<any> {
+    return this.http.get('assets/gifs/night_bg.gif');
   }
 }

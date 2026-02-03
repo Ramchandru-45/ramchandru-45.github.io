@@ -1,4 +1,4 @@
-<div>
-    <app-menu [width]="width()" [height]="height()"></app-menu>
+<div [ngClass]="(resize.windowSize$ | async)! < 720 ? 'frame-container' : 'frame-container1'">
+    <app-menu></app-menu>
     <router-outlet></router-outlet>
 </div>

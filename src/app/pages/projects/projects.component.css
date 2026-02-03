@@ -1,0 +1,15 @@
+.projects-container{
+    position: relative;
+    width: 80%;
+    height: 100%;
+    left: 10%;
+    padding-bottom: 40px;
+}
+
+.project-item{
+    position: relative;
+    margin: 15px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, rgb(119, 86, 235) 50%, rgb(225, 133, 67) 100%);
+    padding: 10px;
+}
