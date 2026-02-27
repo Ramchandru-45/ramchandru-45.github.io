@@ -12,8 +12,4 @@ export class JsonService {
   getBio(): Observable<any> {
     return this.http.get('assets/jsons/bio.json');
   }
-
-  getBg(): Observable<any> {
-    return this.http.get('assets/gifs/night_bg.gif');
-  }
 }

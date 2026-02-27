@@ -19,9 +19,9 @@ import { ProjectsComponent } from '../projects/projects.component';
 export class HomeComponent {
 
   fcolor:string = "white";
-  data: MyData | undefined;
+  data!: MyData | undefined;
   private biosubscription!:Subscription;
-  githubAvatarUrl: string = 'assets/svg/profile.svg';
+  githubAvatarUrl: string = "assets/Profile_avatar_placeholder.png";
   private gitSubscription!: Subscription;
   
   age:  number = new Date().getFullYear() - 2004;
@@ -31,15 +31,15 @@ export class HomeComponent {
 
   ngOnInit() {
     //console.log('subscribed')
-    if(!this.biosubscription){
+    if(this.biosubscription){ // update your data in assets/jsons/bio.json ; not(!) this expression
       this.biosubscription=this.json.getBio().subscribe((res)=>{
         this.data = res;
       })
     }
     
-    if(!this.gitSubscription)
+    if(this.gitSubscription) // After putting your github username, not(!) this expression
     {
-      this.gitSubscription= this.git.getUserProfile("Ramchandru-45").subscribe(data => {
+      this.gitSubscription= this.git.getUserProfile("type your github username").subscribe(data => {
           this.githubAvatarUrl = data.avatar_url;
         });
     }

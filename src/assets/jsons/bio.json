@@ -1,21 +1,21 @@
 {
-    "dob": "2004-05-04",
-    "g": "Male",
+    "dob": "",
+    "g": "",
     "q":{
         "Bachelor":{
-            "degree": "B.Tech in Information Technology",
-            "institution": "Panimalar Engineering College",
-            "yop": "2025"
+            "degree": "",
+            "institution": "",
+            "yop": ""
         },
         "HigherSecondary":{
-            "institution": "Bhaktavatsalam Vidyashram",
-            "yop": "2021"
+            "institution": "",
+            "yop": ""
         },
         "Secondary":{
-            "institution": "Ordnance Clothing factory School",
-            "yop": "2019"
+            "institution": "",
+            "yop": ""
         }
     },
-    "location": "Chennai, India"
+    "location": ""
         
 }

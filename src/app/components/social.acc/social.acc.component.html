@@ -1,9 +1,9 @@
 <div class="social-container">
 
-    <a [href]="linkedInUrl" target="_blank" rel="noopener noreferrer">
+    <a [href]="linkedInUrl" target="_blank" rel="noopener noreferrer" [style.pointer-events]="linkedInUrl != '' ? 'auto' : 'none'">
       <img id="lkdn" class="linkedin"  src="assets/svg/linkedin.svg" alt="linkedin">
     </a>
-    <a [href]="githubUrl" target="_blank" rel="noopener noreferrer">
+    <a [href]="githubUrl" target="_blank" rel="noopener noreferrer" [style.pointer-events]="githubUrl != '' ? 'auto' : 'none'">
       <img id="gith" class="github"  src="assets/svg/github.svg" alt="github">
     </a>
 </div>

@@ -11,7 +11,7 @@ import { CdkCopyToClipboard } from '@angular/cdk/clipboard';
 })
 export class ContactComponent {
   
-  mailID: string = 'ramchan452004@gmail.com';
+  mailID!: string; // 'your mailid here
 
   copySuccess = false;
 

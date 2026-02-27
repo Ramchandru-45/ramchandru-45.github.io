@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
   styleUrl: './social.acc.component.css'
 })
 export class SocialAccComponent {
-  linkedInUrl: string = 'https://www.linkedin.com/in/chandru-ram';
-  githubUrl: string = 'https://www.github.com/Ramchandru-45';
+  linkedInUrl: string = '' //linked in url here
+  githubUrl: string = '' //github url here
   constructor(){}
 
 }

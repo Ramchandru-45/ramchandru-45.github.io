@@ -1,12 +1,12 @@
 @if((resize.windowSize$ | async)! > 720){
     <div ngClass="menubar">
    
-        <div ngClass="logo">RAMCHANDRU</div>
+        <div ngClass="logo">LOGO</div>
         <div ngClass="navicons" >
             <a id="{{item.name}}" (click)="goto(item.id)" [ngClass]="currentPage(item.url) ? 'navigator-current' : 'navigator'" *ngFor="let item of NavigationItems">
                 {{item.name}}
             </a>
-            <!-- <div (click)="magic()" [ngClass]="enabled ? 'light-mode' : 'dark-mode'" >Enable Magic</div> -->
+            
         </div>
     
     </div>
@@ -15,7 +15,7 @@
 
     <div ngClass="menubar-m" >
 
-        <div ngClass="logo-m">RAMCHANDRU</div>
+        <div ngClass="logo-m">LOGO</div>
         
         <div #dropdownContainer [ngClass]="show ? 'navicons-ms' : 'navicons-m'" (focusout)="onFocusOut($event)" tabindex="0">
             <mat-icon ngClass="close-button" svgIcon="menu-icon" (click)="showMenu()"></mat-icon>
@@ -23,7 +23,7 @@
                 <a id="{{item.name}}" (click)="goto(item.id)" [ngClass]="currentPage(item.url) ? 'navigator-current-m' : 'navigator-m'" *ngFor="let item of NavigationItems">
                     {{item.name}}
                 </a>
-                <!-- <div (click)="magic()" [ngClass]="enabled ? 'light-mode' : 'dark-mode'" >Enable Magic</div> -->
+                
             }
         </div>
     </div>

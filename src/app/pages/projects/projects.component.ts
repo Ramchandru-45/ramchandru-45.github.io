@@ -15,16 +15,16 @@ export class ProjectsComponent{
 
   fcolor:string = "white";
   projects!: any[];
-  ignoreProjects: string[] = ['CoE_JavaFSD']
+  ignoreProjects: string[] = [] // put the names iof repositary you want to ignore here
   Message: string = 'Please Wait... Loading Projects';
   private gitSubscription!: Subscription;
 
   constructor(private githubService: GitService, public resize: ResizeService) { }
 
   ngOnInit(): void {
-    if(!this.gitSubscription)
+    if(this.gitSubscription)
     {
-      this.gitSubscription = this.githubService.getProjects("Ramchandru-45").subscribe(
+      this.gitSubscription = this.githubService.getProjects("type your github username").subscribe( //replace "type your github username" with your github username
         (data) => {
           // Filter for public repositories that are not forks and not in ignore list
           this.projects = data.filter((repo: any) => !this.ignoreProjects.includes(repo.name));
